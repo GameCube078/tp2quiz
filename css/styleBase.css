@@ -1,0 +1,135 @@
+/* Normalisation supplémentaire 
+============================================================================= */
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+/* fonts
+============================================================*/
+@font-face {
+    font-family: aniron;
+    src: url(../media/anirm___.ttf);
+}
+
+/* Mise en page
+============================================================*/
+html {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    font-family: aniron, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    /* Ajustement de la taille des polices à la racine du document */
+    font-size: clamp(14px, 0.5rem + 0.5vw, 24px);
+}
+
+body {
+    cursor: url("../media/cursor.png"), auto;
+    max-width: 100%;
+    height: 100%;
+    color: whitesmoke;
+    overflow: hidden;
+    background-color: black;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    z-index: -1;
+    transform-origin: center;
+    transition: filter 0.5s ease;
+}
+
+video.flou {
+    filter: blur(20px);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+
+    /*Conteneur flex en rangée pour l'intro...*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    mix-blend-mode: difference;
+    filter: blur(0.03rem);
+}
+
+header {
+    min-height: 15vh;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid whitesmoke;
+
+    /*Conteneur flex en rangée*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*Ne peut rétrécir comme item flex*/
+    flex: 0 0 auto;
+}
+
+footer {
+    min-height: 10vh;
+    width: 100vw;
+    text-align: center;
+    border-top: 1px solid whitesmoke;
+
+    /*Position fixe*/
+    position: fixed;
+    bottom: 0;
+
+    /*Conteneur flex en rangée*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*Ne peut rétrécir comme item flex*/
+    flex: 0 0 auto;
+}
+
+@keyframes commencer {
+    from,
+    to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 100%;
+    }
+}
+
+h1 {
+    font-family: aniron, cursive;
+    font-size: 1.7rem;
+    animation: commencer 2s ease-in-out infinite;
+    cursor: url("../media/cursor.png"), auto;
+}
+
+section {
+    width: 100vw;
+    height: 85vh;
+
+    font-size: 2rem;
+    text-align: center;
+
+    /*Conteneur flex colonne*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

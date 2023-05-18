@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+    <head>
+        <title>TIM-2W2 - Exercice 9</title>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/png" href="favicon.png" sizes="all" />
+
+        <!-- Ajustement de la taille du viewport-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Polices de caractères utilisées-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet" />
+
+        <!-- Polices d'icônes utilisées-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+        <!-- Références aux CSS-->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/styleBase.css" />
+        <link rel="stylesheet" href="css/styleQuiz.css" />
+    </head>
+
+    <body>
+        <main class="intro">
+            <div class="anim-titre-intro">Le Seigneur des Anneaux</div>
+            <footer></footer>
+        </main>
+
+        <main class="quiz">
+            <header>Le Seigneur des Anneaux</header>
+
+            <section>
+                <div class="titre-question"></div>
+                <div class="les-choix-de-reponse"></div>
+            </section>
+            <div class="barre-avancement"></div>
+        </main>
+
+        <main class="fin">
+            <!-- La section contenant le score sera insérée dynamiquement ici -->
+            <span class="material-icons btn-recommencer">replay</span>
+        </main>
+        <div class="video">
+            <video loop muted autoplay>
+                <source src="media/LordOfTheRingLoop.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <!-- Chargement des scripts -->
+        <script src="js/questionsQuiz.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
